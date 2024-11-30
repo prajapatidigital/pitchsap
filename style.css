@@ -10,6 +10,7 @@
 .navbar-section{
     width: 100%;
     padding: 0 30px;
+    position: relative;
 }
 
 .navbar-container{
@@ -68,6 +69,12 @@ color: #331252;
   width: 110%;
 }
 
+.nav-btn-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
 .nav-btn{
     border: none;
     color: #fff;
@@ -101,7 +108,49 @@ color: #331252;
    }
 
 
+.bar-btn{
+  color: #12161a;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
 
+.navbar-mobile-container{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background: #4A1B79;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-mobile-container{
+  position: relative;
+}
+
+.close-btn{
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background:transparent;
+}
+
+.nav-mobile-container .nav-link-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
    /* ***************  hero section ************ */
@@ -917,5 +966,63 @@ background: linear-gradient(to right, #4A1B79 6%, #8A33E2 100%);
   }
 }
 
+@media(max-width:998px){
+  .Testimonials-container{
+    padding-left: 50px;
+  }
+  
+}
 
 
+@media(max-width:840px){
+  .navbar-section{
+    padding: 0 10px;
+  }
+  .benefit-container{
+    grid-template-columns: 1fr;
+  }
+  .works-grid-container{
+    grid-template-columns: 1fr 1fr;
+  }
+  .bar-btn{
+    display: block;
+  }
+  .nav-link-container{
+    display: none;
+  }
+  .navbar-container{
+    justify-content: space-between;
+  }
+
+ .nav-link-list-item a{
+  color: #fff;
+ }
+}
+
+@media(max-width:692px){
+  .works-container{
+    padding: 40px 30px;
+  }
+  .hero-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:600px){
+  .works-grid-container{
+    grid-template-columns:1fr;
+  }
+  .benefit-text-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:540px){
+  .hero-heading{
+    line-height: 1;
+    font-size: 45px;
+  }
+  .Testimonials-grid-item{
+    height: 400px;
+  }
+}
