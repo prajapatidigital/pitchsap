@@ -49,16 +49,35 @@
           </nav>
           <div class="nav-btn-container">
             <button class="nav-btn">Get Started</button>
+            <button class="bar-btn" id="bar-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg></button>
+      
           </div>
-        </div>
-        <!-- <div class="navbar-mobile-container">
-                <div class="nav-logo">
-                    <img src="assets/Pitchsap Logo@2x (1).png" alt="Pitchsap brand logo">
-                </div>
-                <nav class="nav-link-container"></nav>
-                <div class="nav-btn-container"></div>
-                <div class="nav-toggle-btn"></div>
-            </div> -->
+           </div>
+         <div class="navbar-mobile-container" id="rspo-div">
+               
+                <nav class="nav-mobile-container">
+                  <ul class="nav-link-list">
+                    <li class="nav-link-list-item">
+                      <a href="#works-section">How It Works</a>
+                    </li>
+      
+                    <li class="nav-link-list-item">
+                      <a href="#benefit-section">Benefits</a>
+                    </li>
+      
+                    <li class="nav-link-list-item">
+                      <a href="#Testimonials-section">Testimonials</a>
+                    </li>
+      
+                    <li class="nav-link-list-item">
+                      <a href="#cta-section">Contact Us</a>
+                    </li>
+                  </ul>
+                </nav>
+              <button class="close-btn" id="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+              </button>
+            </div> 
       </section>
 
       <!-- ************ hero section *********** -->
@@ -480,7 +499,7 @@
 
       <!-- ******************* cta section *********************** -->
 
-      <section class="cta-section">
+      <section class="cta-section" id="cta-section">
         <div class="cta-container">
           <h2 class="cta-heading">Ready to Launch Your Idea?</h2>
 
@@ -527,22 +546,7 @@
       <!-- ***************** footer-section********************* -->
 
 
-      <!-- <footer class="footer-section">
-        <div class="footer-container">
-          <div class="footer-logo-div">
-            <div class="footer-logo">
-              <img src="assets/Pitchsap Logo 3@2x (1).png" alt="">
-            </div>
-            <div class="footer-about-text">
-              <h4 class="footer-heading">About Us:</h4>
-              <p class="footer-about-pera">PitchSap is committed to helping entrepreneurs turn their ideas into reality. With expert guidance, community support, and a proven process, we’re your partner in success.</p>
-           
-            </div>
-           </div>
-          <div class="Contact-div"></div>
-
-        </div>
-      </footer> -->
+     
 <section class="footer-section">
       <footer class="footer-container" >
         <div class="footer-content">
@@ -623,14 +627,40 @@ owl.owlCarousel({
     autoplay:true,
     autoplayTimeout:4000,
     smartSpeed:800,
-    autoplayHoverPause:true
+    autoplayHoverPause:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        900:{
+            items:1,
+            nav:false
+        },
+        1000:{
+            items:2,
+            nav:true,
+            loop:false
+        }
+    }
 });
 $('.play').on('click',function(){
     owl.trigger('play.owl.autoplay',[2000])
 })
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
-})
+});
+$(document).ready(function(){
+          $("#close-btn").click(function(){
+         $("#rspo-div").fadeOut();
+         });
+         $("#bar-btn").click(function(){
+         $("#rspo-div").fadeToggle();
+         });
+        });
+
+
     </script>
   </body>
 </html>
