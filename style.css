@@ -289,10 +289,7 @@ color: #331252;
         align-items: center;
         
     }
-    /* .hero-img-div{
-        height: 80%;
-        width: 80%;
-    } */
+    
    .hero-img-container img{
     width: 100%;
    }
@@ -1000,9 +997,6 @@ background: linear-gradient(to right, #4A1B79 6%, #8A33E2 100%);
  .nav-link-list-item a{
   color: #fff;
  }
- /* .navbar-mobile-container{
-  display: flex;
- } */
 }
 
 @media(max-width:692px){
